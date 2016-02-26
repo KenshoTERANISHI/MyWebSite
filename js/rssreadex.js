@@ -19,7 +19,7 @@ feedAdd("http://helloproject-sokuhou.doorblog.jp/index.rdf", 1);
 }
 function feedAdd(rssUrl, boolNum) {
 var feed = new google.feeds.Feed(rssUrl);
-feed.setNumEntries(10);
+feed.setNumEntries(20);
 feed.load(function(result) {
 if (!result.error) {
 for (var i = 0; i < result.feed.entries.length; i++) {
@@ -32,7 +32,7 @@ entryNum+=1;
 boolCount+=1;
 }
 if(boolCount==feedNum){
-feedOutput("feed", 90);//フィードの出力
+feedOutput("feed", 180);//フィードの出力
 boolCount=0;
 }
 });
@@ -43,7 +43,7 @@ var useDate = "";
   var htmlstr="";
 var container = document.getElementById("feed");
 entryArray = asort(entryArray, "sortDate");
-if(listNum==90){
+if(listNum==180){
 listNum = entryNum;
 }
 for (var i = 0; i < listNum; i++) {
@@ -53,17 +53,16 @@ htmlstr += '<div class="card">';
 htmlstr += '<a class="thumbnail" href="'+ entry.link +'" target="_blank">';
 htmlstr += '<div class="col-xs-12 col-sm-6 col-md-4 col-lg-4" >';
 */
+
 imgsrc = entry.content.match(/src="(.*?)"/igm);
-if (imgsrc.match(/http:\/\/(?:www\.youtube\.com\/watch\?.*v=|youtu\.be\/)([\w-]+)/)) {
-	addThumbnail(elem, 'src="http://i.ytimg.com/vi/' + RegExp.$1 + '/default.jpg"', imgsrc);
-}
-if(!imgsrc){imgsrc="image/noimage.png"}
+if(!imgsrc){imgsrc="../image/noimage.png"}
 var pastDay = 0.25;
 var now = (new Date()).getTime();
 var pastTime = pastDay * 24 * 60 * 60 * 1000;
 var pdate = new Date(entry.publishedDate);
 var strdate = pdate.getFullYear() + '/' + (pdate.getMonth() + 1) + '/' + pdate.getDate() + ' ' + pdate.getHours() + ':' + pdate.getMinutes() /*+ ':' + pdate.getSeconds() + '  '*/;
-
+if(entryArray[i].blogName=='ハロプロまとめ『カラフルxハロプロ’16』')entryArray[i].blogName='カラフルxハロプロ’16';
+if(entryArray[i].blogName=='ハロプロってながいぜぃ・・・Blog')entryArray[i].blogName='ハロプロってながいぜぃ';
 /*
 htmlstr += '<span  class="img">';
 htmlstr += '<img class="card-img" ' + imgsrc +' alt="ハロプロ画像">';
@@ -87,12 +86,12 @@ htmlstr += '<a href="'+ entry.link +'" target="_blank">';
 htmlstr += '<section class="sample3">';
 htmlstr += '    <figure>';
 htmlstr += '        <img '+imgsrc+ '>';
-htmlstr += '        <figcaption class="title">'+ entry.title+'</figcaption>';
+htmlstr += '        <figcaption class="title">'+strdate +"</br>"+ entryArray[i].blogName +"</br></br>"+ entry.title+'</figcaption>';
 htmlstr += '    </figure>';
 htmlstr += '</section>';
 htmlstr += '</a>';
 }
-container.innerHTML =  htmlstr ;
+container.insertAdjacentHTML("beforeend",  htmlstr) ;
 }
 
 function asort(myArray, key){

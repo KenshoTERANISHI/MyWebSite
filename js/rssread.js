@@ -75,7 +75,7 @@ htmlstr += '<h4></h4>';
 htmlstr += '<p></p>';
 htmlstr += '</div></a></div>';
 }
-container.innerHTML =  htmlstr ;
+container.insertAdjacentHTML("beforeend",  htmlstr) ;
 }
 
 function asort(myArray, key){
