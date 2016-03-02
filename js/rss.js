@@ -68,6 +68,7 @@ var pastTime = pastDay * 24 * 60 * 60 * 1000;//newマークをつける期間の
       htmlstr += '<a class="thumbnail" href="'+ entry.link +'" target="_blank">';
       imgsrc = entry.content.match(/src="((http:){1}[\S_-]+(\.gif))"/igm);
         if(!imgsrc){imgsrc=entry.content.match(/src="((http:)[\S]+((\.jpg)|(\.JPG)|(\.jpeg)|(\.JPEG)|(\.gif)|(\.GIF)|(\.png)|(\.PNG)))"/igm);}
+        if(!imgsrc){imgsrc=' style="top: 30%;left: 37%;width: 25%;" src="../image/noimage.png"'}
       var pdate = new Date(entry.publishedDate);
       var strdate = pdate.getFullYear() + '年' + (pdate.getMonth() + 1) + '月' + pdate.getDate() + '日' + pdate.getHours() + '時' + pdate.getMinutes() + '分' + pdate.getSeconds() + '秒';
       htmlstr += '<span  class="img">';
@@ -102,6 +103,7 @@ var pastTime = pastDay * 24 * 60 * 60 * 1000;//newマークをつける期間の
       htmlstr += '<a class="thumbnail" href="'+ entry.link +'" target="_blank">';
       imgsrc = entry.content.match(/src="((http:){1}[\S_-]+(\.gif))"/igm);
         if(!imgsrc){imgsrc=entry.content.match(/src="((http:)[\S]+((\.jpg)|(\.JPG)|(\.jpeg)|(\.JPEG)|(\.gif)|(\.GIF)|(\.png)|(\.PNG)))"/igm);}
+if(!imgsrc){imgsrc=' style="top: 30%;left: 37%;width: 25%;" src="../image/noimage.png"'}
       var pdate = new Date(entry.publishedDate);
       var strdate = pdate.getFullYear() + '年' + (pdate.getMonth() + 1) + '月' + pdate.getDate() + '日' + pdate.getHours() + '時' + pdate.getMinutes() + '分' + pdate.getSeconds() + '秒';
       htmlstr += '<span class="img">';
@@ -136,6 +138,7 @@ var pastTime = pastDay * 24 * 60 * 60 * 1000;//newマークをつける期間の
         htmlstr += '<a class="thumbnail" href="'+ entry.link +'" target="_blank">';
         imgsrc = entry.content.match(/src="((http:){1}[\S_-]+(\.gif))"/igm);
           if(!imgsrc){imgsrc=entry.content.match(/src="((http:)[\S]+((\.jpg)|(\.JPG)|(\.jpeg)|(\.JPEG)|(\.gif)|(\.GIF)|(\.png)|(\.PNG)))"/igm);}
+if(!imgsrc){imgsrc=' style="top: 30%;left: 37%;width: 25%;" src="../image/noimage.png"'}
         var pdate = new Date(entry.publishedDate);
         var strdate = pdate.getFullYear() + '年' + (pdate.getMonth() + 1) + '月' + pdate.getDate() + '日' + pdate.getHours() + '時' + pdate.getMinutes() + '分' + pdate.getSeconds() + '秒';
         htmlstr += '<span class="img">';
@@ -170,6 +173,7 @@ var pastTime = pastDay * 24 * 60 * 60 * 1000;//newマークをつける期間の
       htmlstr += '<a class="thumbnail" href="'+ entry.link +'" target="_blank">';
       imgsrc = entry.content.match(/src="((http:){1}[\S_-]+(\.gif))"/igm);
         if(!imgsrc){imgsrc=entry.content.match(/src="((http:)[\S]+((\.jpg)|(\.JPG)|(\.jpeg)|(\.JPEG)|(\.gif)|(\.GIF)|(\.png)|(\.PNG)))"/igm);}
+if(!imgsrc){imgsrc=' style="top: 30%;left: 37%;width: 25%;" src="../image/noimage.png"'}
       var pdate = new Date(entry.publishedDate);
       var strdate = pdate.getFullYear() + '年' + (pdate.getMonth() + 1) + '月' + pdate.getDate() + '日' + pdate.getHours() + '時' + pdate.getMinutes() + '分' + pdate.getSeconds() + '秒';
       htmlstr += '<span class="img">';
@@ -204,6 +208,7 @@ var pastTime = pastDay * 24 * 60 * 60 * 1000;//newマークをつける期間の
       htmlstr += '<a class="thumbnail" href="'+ entry.link +'" target="_blank">';
       imgsrc = entry.content.match(/src="((http:){1}[\S_-]+(\.gif))"/igm);
         if(!imgsrc){imgsrc=entry.content.match(/src="((http:)[\S]+((\.jpg)|(\.JPG)|(\.jpeg)|(\.JPEG)|(\.gif)|(\.GIF)|(\.png)|(\.PNG)))"/igm);}
+if(!imgsrc){imgsrc=' style="top: 30%;left: 37%;width: 25%;" src="../image/noimage.png"'}
       var pdate = new Date(entry.publishedDate);
       var strdate = pdate.getFullYear() + '年' + (pdate.getMonth() + 1) + '月' + pdate.getDate() + '日' + pdate.getHours() + '時' + pdate.getMinutes() + '分' + pdate.getSeconds() + '秒';
       htmlstr += '<span class="img">';
@@ -238,6 +243,7 @@ var pastTime = pastDay * 24 * 60 * 60 * 1000;//newマークをつける期間の
     htmlstr += '<a class="thumbnail" href="'+ entry.link +'" target="_blank">';
     imgsrc = entry.content.match(/src="((http:){1}[\S_-]+(\.gif))"/igm);
       if(!imgsrc){imgsrc=entry.content.match(/src="((http:)[\S]+((\.jpg)|(\.JPG)|(\.jpeg)|(\.JPEG)|(\.gif)|(\.GIF)|(\.png)|(\.PNG)))"/igm);}
+if(!imgsrc){imgsrc=' style="top: 30%;left: 37%;width: 25%;" src="../image/noimage.png"'}
     var pdate = new Date(entry.publishedDate);
     var strdate = pdate.getFullYear() + '年' + (pdate.getMonth() + 1) + '月' + pdate.getDate() + '日' + pdate.getHours() + '時' + pdate.getMinutes() + '分' + pdate.getSeconds() + '秒';
     htmlstr += '<span class="img">';
@@ -272,6 +278,7 @@ var pastTime = pastDay * 24 * 60 * 60 * 1000;//newマークをつける期間の
     htmlstr += '<a class="thumbnail" href="'+ entry.link +'" target="_blank">';
     imgsrc = entry.content.match(/src="((http:){1}[\S_-]+(\.gif))"/igm);
       if(!imgsrc){imgsrc=entry.content.match(/src="((http:)[\S]+((\.jpg)|(\.JPG)|(\.jpeg)|(\.JPEG)|(\.gif)|(\.GIF)|(\.png)|(\.PNG)))"/igm);}
+if(!imgsrc){imgsrc=' style="top: 30%;left: 37%;width: 25%;" src="../image/noimage.png"'}
     var pdate = new Date(entry.publishedDate);
     var strdate = pdate.getFullYear() + '年' + (pdate.getMonth() + 1) + '月' + pdate.getDate() + '日' + pdate.getHours() + '時' + pdate.getMinutes() + '分' + pdate.getSeconds() + '秒';
     htmlstr += '<span  class="img">';
@@ -306,6 +313,7 @@ var pastTime = pastDay * 24 * 60 * 60 * 1000;//newマークをつける期間の
     htmlstr += '<a class="thumbnail" href="'+ entry.link +'" target="_blank">';
     imgsrc = entry.content.match(/src="((http:){1}[\S_-]+(\.gif))"/igm);
       if(!imgsrc){imgsrc=entry.content.match(/src="((http:)[\S]+((\.jpg)|(\.JPG)|(\.jpeg)|(\.JPEG)|(\.gif)|(\.GIF)|(\.png)|(\.PNG)))"/igm);}
+if(!imgsrc){imgsrc=' style="top: 30%;left: 37%;width: 25%;" src="../image/noimage.png"'}
     var pdate = new Date(entry.publishedDate);
     var strdate = pdate.getFullYear() + '年' + (pdate.getMonth() + 1) + '月' + pdate.getDate() + '日' + pdate.getHours() + '時' + pdate.getMinutes() + '分' + pdate.getSeconds() + '秒';
     htmlstr += '<span  class="img">';
@@ -340,6 +348,7 @@ var pastTime = pastDay * 24 * 60 * 60 * 1000;//newマークをつける期間の
     htmlstr += '<a class="thumbnail" href="'+ entry.link +'" target="_blank">';
     imgsrc = entry.content.match(/src="((http:){1}[\S_-]+(\.gif))"/igm);
       if(!imgsrc){imgsrc=entry.content.match(/src="((http:)[\S]+((\.jpg)|(\.JPG)|(\.jpeg)|(\.JPEG)|(\.gif)|(\.GIF)|(\.png)|(\.PNG)))"/igm);}
+if(!imgsrc){imgsrc=' style="top: 30%;left: 37%;width: 25%;" src="../image/noimage.png"'}
     var pdate = new Date(entry.publishedDate);
     var strdate = pdate.getFullYear() + '年' + (pdate.getMonth() + 1) + '月' + pdate.getDate() + '日' + pdate.getHours() + '時' + pdate.getMinutes() + '分' + pdate.getSeconds() + '秒';
     htmlstr += '<span  class="img">';
@@ -372,7 +381,7 @@ var pastTime = pastDay * 24 * 60 * 60 * 1000;//newマークをつける期間の
     var entry = result.feed.entries[i];
     htmlstr += '<div class="card"><div class="col-xs-12 col-sm-6 col-md-4 col-lg-4" >';
     htmlstr += '<a class="thumbnail" href="'+ entry.link +'" target="_blank">';
-    imgsrc = entry.content.match(/src="(.*?)"/igm);
+    imgsrc='src="../image/blog10.png"'
     var pdate = new Date(entry.publishedDate);
     var strdate = pdate.getFullYear() + '年' + (pdate.getMonth() + 1) + '月' + pdate.getDate() + '日' + pdate.getHours() + '時' + pdate.getMinutes() + '分' + pdate.getSeconds() + '秒';
     htmlstr += '<span  class="img">';

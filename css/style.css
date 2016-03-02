@@ -223,7 +223,7 @@ img {
   padding: 0;
   text-align: center;
   text-decoration: none;
-  color: #666666;
+  color: #888888;
 }
 .thumbnail .img {
   display: block;
@@ -471,7 +471,7 @@ footer.entry-meta .meta-in {
 /////////////////////////////////////////////////////////////////////*/
 @media (min-width: 1200px) {
   .container {
-    max-width: 1080px;
+
     margin:0 auto;
   }
 }
@@ -497,7 +497,7 @@ footer.entry-meta .meta-in {
   background: #fff;
   border-radius: 5px;
   box-shadow: 0 2px 5px #ccc;
-  width:31.3333%;
+  width:23%;
   float:left;
   height:300px;
   margin:1%;
