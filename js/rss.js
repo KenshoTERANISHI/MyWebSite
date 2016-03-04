@@ -54,6 +54,10 @@ function initialize() {
   var feedurl10 = "http://feedblog.ameba.jp/rss/ameblo/morningmusume-10ki/rss20.xml";
   var feed10 = new google.feeds.Feed(feedurl10);
   feed10.setNumEntries(number);
+  var feedurl11 = "http://matome.naver.jp/feed/topic/1LwVo";
+  var feed11 = new google.feeds.Feed(feedurl11);
+  feed11.setNumEntries(number);
+//  feed11.setResultFormat(google.feeds.Feed.XML_FORMAT);
 
   feed1.load(function (result){
   if (!result.error){
@@ -84,7 +88,7 @@ var pastTime = pastDay * 24 * 60 * 60 * 1000;//newマークをつける期間の
       htmlstr += '<p></p>';
       htmlstr += '</div></div>';
     }
-     container.innerHTML = htmlstr;
+     container.insertAdjacentHTML("beforeend", htmlstr);
   }else{
      alert(result.error.code + ":" + result.error.message);
   }
@@ -119,7 +123,7 @@ if(!imgsrc){imgsrc=' style="top: 30%;left: 37%;width: 25%;" src="../image/noimag
       htmlstr += '<p></p>';
       htmlstr += '</div></div>';
     }
-     container.innerHTML = htmlstr;
+    container.insertAdjacentHTML("beforeend", htmlstr);
   }else{
      alert(result.error.code + ":" + result.error.message);
   }
@@ -154,7 +158,7 @@ if(!imgsrc){imgsrc=' style="top: 30%;left: 37%;width: 25%;" src="../image/noimag
         htmlstr += '<p></p>';
         htmlstr += '</div></div>';
       }
-       container.innerHTML = htmlstr;
+       container.insertAdjacentHTML("beforeend", htmlstr);
     }else{
        alert(result.error.code + ":" + result.error.message);
     }
@@ -189,7 +193,7 @@ if(!imgsrc){imgsrc=' style="top: 30%;left: 37%;width: 25%;" src="../image/noimag
       htmlstr += '<p></p>';
       htmlstr += '</div></div>';
     }
-     container.innerHTML = htmlstr;
+    container.insertAdjacentHTML("beforeend", htmlstr);
   }else{
      alert(result.error.code + ":" + result.error.message);
   }
@@ -224,7 +228,7 @@ if(!imgsrc){imgsrc=' style="top: 30%;left: 37%;width: 25%;" src="../image/noimag
       htmlstr += '<p></p>';
       htmlstr += '</div></div>';
     }
-     container.innerHTML = htmlstr;
+    container.insertAdjacentHTML("beforeend", htmlstr);
   }else{
      alert(result.error.code + ":" + result.error.message);
   }
@@ -259,7 +263,7 @@ if(!imgsrc){imgsrc=' style="top: 30%;left: 37%;width: 25%;" src="../image/noimag
     htmlstr += '<p></p>';
     htmlstr += '</div></div>';
   }
-   container.innerHTML = htmlstr;
+   container.insertAdjacentHTML("beforeend", htmlstr);
 }else{
    alert(result.error.code + ":" + result.error.message);
 }
@@ -294,7 +298,7 @@ if(!imgsrc){imgsrc=' style="top: 30%;left: 37%;width: 25%;" src="../image/noimag
     htmlstr += '<p></p>';
     htmlstr += '</div></div>';
   }
-   container.innerHTML = htmlstr;
+  container.insertAdjacentHTML("beforeend", htmlstr);
 }else{
    alert(result.error.code + ":" + result.error.message);
 }
@@ -329,7 +333,7 @@ if(!imgsrc){imgsrc=' style="top: 30%;left: 37%;width: 25%;" src="../image/noimag
     htmlstr += '<p></p>';
     htmlstr += '</div></div>';
   }
-   container.innerHTML = htmlstr;
+   container.insertAdjacentHTML("beforeend", htmlstr);
 }else{
    alert(result.error.code + ":" + result.error.message);
 }
@@ -364,7 +368,7 @@ if(!imgsrc){imgsrc=' style="top: 30%;left: 37%;width: 25%;" src="../image/noimag
     htmlstr += '<p></p>';
     htmlstr += '</div></div>';
   }
-   container.innerHTML = htmlstr;
+   container.insertAdjacentHTML("beforeend", htmlstr);
 }else{
    alert(result.error.code + ":" + result.error.message);
 }
@@ -397,7 +401,43 @@ var pastTime = pastDay * 24 * 60 * 60 * 1000;//newマークをつける期間の
     htmlstr += '<p></p>';
     htmlstr += '</div></div>';
   }
-   container.innerHTML = htmlstr;
+  container.insertAdjacentHTML("beforeend", htmlstr);
+}else{
+   alert(result.error.code + ":" + result.error.message);
+}
+});
+
+feed11.load(function (result){
+if (!result.error){
+  var pastDay = 0.25;//何日数前までnewマークをつけるか指定
+var now = (new Date()).getTime();//現在の時間
+var pastTime = pastDay * 24 * 60 * 60 * 1000;//newマークをつける期間の時間
+  var container = document.getElementById("feed11");
+  var htmlstr = "";
+  for (var i = 0; i < result.feed.entries.length; i++) {
+    var entry = result.feed.entries[i];
+    htmlstr += '<div class="card"><div class="col-xs-12 col-sm-6 col-md-4 col-lg-4" >';
+    htmlstr += '<a class="thumbnail" href="'+ entry.link +'" target="_blank">';
+    imgsrc = "src=" + entry.mediaGroups[0].contents[0].url;
+      if(!imgsrc){imgsrc=entry.content.match(/src="((http:)[\S]+((\.jpg)|(\.JPG)|(\.jpeg)|(\.JPEG)|(\.gif)|(\.GIF)|(\.png)|(\.PNG)))"/igm);}
+      if(!imgsrc){imgsrc=' style="top: 30%;left: 37%;width: 25%;" src="../image/noimage.png"'}
+
+    var pdate = new Date(entry.publishedDate);
+    var strdate = pdate.getFullYear() + '年' + (pdate.getMonth() + 1) + '月' + pdate.getDate() + '日' + pdate.getHours() + '時' + pdate.getMinutes() + '分' + pdate.getSeconds() + '秒';
+    htmlstr += '<span  class="img">';
+    htmlstr += '<img class="card-img" ' + imgsrc +' alt="ハロプロ画像">';
+    htmlstr += '<span class="cover"> <span class="more"> See details &rarr; </span> </span> </span>';
+    var entryTime = new Date(entry.publishedDate).getTime();
+    if(now >= entryTime && now <= (entryTime + pastTime)){
+      htmlstr += '<strong class="strong">new!</strong>';
+    }
+    htmlstr += '<p>' + strdate + '</p>';
+htmlstr += '<span>' + entry.title + '</span></a>';
+    htmlstr += '<h4></h4>';
+    htmlstr += '<p></p>';
+    htmlstr += '</div></div>';
+  }
+   container.insertAdjacentHTML("beforeend", htmlstr);
 }else{
    alert(result.error.code + ":" + result.error.message);
 }

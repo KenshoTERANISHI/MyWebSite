@@ -7,7 +7,7 @@ var boolCount = 0;
 var feedNum = 9;
 
 function initialize() {
-  //feedAdd("http://feedblog.ameba.jp/rss/ameblo/morningmusume-10ki/rss20.xml", 10);
+  //feedAdd("http://matome.naver.jp/feed/topic/1LwVo", 10);
   feedAdd("http://fanblogs.jp/hoeeee/index1_0.rdf", 9);
   feedAdd("http://c-ute.doorblog.jp/index.rdf", 8);
   feedAdd("http://colorhello.blog.jp/index.rdf", 7);
