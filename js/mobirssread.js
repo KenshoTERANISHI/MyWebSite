@@ -50,8 +50,9 @@ listNum = entryNum;
 for (var i = 0; i < listNum; i++) {
 var entry = entryArray[i];
 htmlstr += '<div class="mobicard"><div class="col-xs-12 col-sm-6 col-md-4 col-lg-4" >';
-htmlstr += '<a class="thumbnail" href="'+ entry.link +'" target="_blank">';
-imgsrc = entry.content.match(/src="(.*?)"/igm);
+htmlstr += '<a class="thumbnail" href="'+ entry.link +'" target="_self">';
+imgsrc = entry.content.match(/(src="http:)[\S]+((\.jpg)|(\.JPG)|(\.jpeg)|(\.JPEG)|(\.gif)|(\.GIF)|(\.png)|(\.PNG))"/);
+if(!imgsrc){imgsrc=' style="top: 30%;left: 37%;width: 25%;" src="../image/noimage.png"'}
 var pastDay = 0.25;
 var now = (new Date()).getTime();
 var pastTime = pastDay * 24 * 60 * 60 * 1000;
@@ -61,9 +62,10 @@ htmlstr += '<span  class="img">';
 htmlstr += '<img class="card-img" ' + imgsrc +' alt="ハロプロ画像">';
 //htmlstr += '<span class="cover"> <span class="more"> See details &rarr; </span> </span> </span>';
 var entryTime = new Date(entry.publishedDate).getTime();
+htmlstr +='<div class="layerBox">'
 htmlstr +='<div class="titlediv">';
-//if(now >= entryTime && now <= (entryTime + pastTime)){htmlstr += '<strong style="color:#15BDBD">new!</strong>';}
-//else{htmlstr += '<strong style="color:rgba(0,0,0,0)">-</strong>';}
+if(now >= entryTime && now <= (entryTime + pastTime)){htmlstr += '<strong style="color:#15BDBD">new!</strong>';}
+else{htmlstr += '<strong style="color:rgba(0,0,0,0)">-</strong>';}
 htmlstr += '<span class="strdate">' + strdate + '</span>';
 if(entryArray[i].blogName=='ハロプロまとめ『カラフルxハロプロ’16』')entryArray[i].blogName='カラフルxハロプロ’16';
 if(entryArray[i].blogName=='ハロプロってながいぜぃ・・・Blog')entryArray[i].blogName='ハロプロってながいぜぃ';
@@ -72,6 +74,7 @@ htmlstr +='</div>';
 htmlstr += '<span class="mobititle">' + entry.title + '</span>';
 htmlstr += '<h4></h4>';
 htmlstr += '<p></p>';
+htmlstr +='</div>';
 htmlstr += '</div></div>';
 }
 container.innerHTML =  htmlstr ;

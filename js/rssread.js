@@ -67,6 +67,7 @@ function feedOutput(feedId, listNum) {
     htmlstr += '<img class="card-img" ' + imgsrc + ' alt="ハロプロ画像">';
     htmlstr += '<span class="cover"> <span class="more"> See details &rarr; </span> </span> </span>';
     var entryTime = new Date(entry.publishedDate).getTime();
+    htmlstr += '<div class="layerBox">';
     if (now >= entryTime && now <= (entryTime + pastTime)) {
       htmlstr += '<strong class="strong">new!</strong></br>';
     } else {
@@ -80,10 +81,10 @@ function feedOutput(feedId, listNum) {
 
     htmlstr += '<span class="blogname">' + entryArray[i].blogName + '</span>';
     htmlstr += '</div>';
-    htmlstr += '</div>';
     htmlstr += '<span class="title">' + entry.title + '</span>';
     htmlstr += '<h4></h4>';
     htmlstr += '<p></p>';
+    htmlstr += '</div>';
     htmlstr += '</div></a></div>';
 
 

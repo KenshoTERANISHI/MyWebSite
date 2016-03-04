@@ -79,6 +79,7 @@ var pastTime = pastDay * 24 * 60 * 60 * 1000;//newマークをつける期間の
       htmlstr += '<img class="card-img" ' + imgsrc +' alt="ハロプロ画像">';
       htmlstr += '<span class="cover"> <span class="more"> See details &rarr; </span> </span> </span>';
       var entryTime = new Date(entry.publishedDate).getTime();
+      htmlstr+='<div class="layerBox">';
       if(now >= entryTime && now <= (entryTime + pastTime)){
         htmlstr += '<strong class="strong">new!</strong>';
       }
@@ -86,6 +87,7 @@ var pastTime = pastDay * 24 * 60 * 60 * 1000;//newマークをつける期間の
   htmlstr += '<span>' + entry.title + '</span></a>';
       htmlstr += '<h4></h4>';
       htmlstr += '<p></p>';
+      htmlstr += '</div>';
       htmlstr += '</div></div>';
     }
      container.insertAdjacentHTML("beforeend", htmlstr);
@@ -114,6 +116,7 @@ if(!imgsrc){imgsrc=' style="top: 30%;left: 37%;width: 25%;" src="../image/noimag
       htmlstr += '<img class="card-img" ' + imgsrc +' alt="ハロプロ画像">';
       htmlstr += '<span class="cover"> <span class="more"> See details &rarr; </span> </span> </span>';
       var entryTime = new Date(entry.publishedDate).getTime();
+      htmlstr+='<div class="layerBox">';
       if(now >= entryTime && now <= (entryTime + pastTime)){
         htmlstr += '<strong class="strong">new!</strong>';
       }
@@ -121,6 +124,7 @@ if(!imgsrc){imgsrc=' style="top: 30%;left: 37%;width: 25%;" src="../image/noimag
       htmlstr += '<span>' + entry.title + '</span></a>';
       htmlstr += '<h4></h4>';
       htmlstr += '<p></p>';
+      htmlstr += '</div>';
       htmlstr += '</div></div>';
     }
     container.insertAdjacentHTML("beforeend", htmlstr);
@@ -149,6 +153,7 @@ if(!imgsrc){imgsrc=' style="top: 30%;left: 37%;width: 25%;" src="../image/noimag
         htmlstr += '<img class="card-img" ' + imgsrc +' alt="ハロプロ画像">';
         htmlstr += '<span class="cover"> <span class="more"> See details &rarr; </span> </span> </span>';
         var entryTime = new Date(entry.publishedDate).getTime();
+        htmlstr+='<div class="layerBox">';
         if(now >= entryTime && now <= (entryTime + pastTime)){
           htmlstr += '<strong class="strong">new!</strong>';
         }
@@ -156,6 +161,7 @@ if(!imgsrc){imgsrc=' style="top: 30%;left: 37%;width: 25%;" src="../image/noimag
     htmlstr += '<span>' + entry.title + '</span></a>';
         htmlstr += '<h4></h4>';
         htmlstr += '<p></p>';
+        htmlstr += '</div>';
         htmlstr += '</div></div>';
       }
        container.insertAdjacentHTML("beforeend", htmlstr);
@@ -184,6 +190,7 @@ if(!imgsrc){imgsrc=' style="top: 30%;left: 37%;width: 25%;" src="../image/noimag
       htmlstr += '<img class="card-img" ' + imgsrc +' alt="ハロプロ画像">';
       htmlstr += '<span class="cover"> <span class="more"> See details &rarr; </span> </span> </span>';
       var entryTime = new Date(entry.publishedDate).getTime();
+      htmlstr+='<div class="layerBox">';
       if(now >= entryTime && now <= (entryTime + pastTime)){
         htmlstr += '<strong class="strong">new!</strong>';
       }
@@ -191,6 +198,7 @@ if(!imgsrc){imgsrc=' style="top: 30%;left: 37%;width: 25%;" src="../image/noimag
   htmlstr += '<span>' + entry.title + '</span></a>';
       htmlstr += '<h4></h4>';
       htmlstr += '<p></p>';
+      htmlstr += '</div>';
       htmlstr += '</div></div>';
     }
     container.insertAdjacentHTML("beforeend", htmlstr);
@@ -219,6 +227,7 @@ if(!imgsrc){imgsrc=' style="top: 30%;left: 37%;width: 25%;" src="../image/noimag
       htmlstr += '<img class="card-img" ' + imgsrc +' alt="ハロプロ画像">';
       htmlstr += '<span class="cover"> <span class="more"> See details &rarr; </span> </span> </span>';
       var entryTime = new Date(entry.publishedDate).getTime();
+      htmlstr+='<div class="layerBox">';
       if(now >= entryTime && now <= (entryTime + pastTime)){
         htmlstr += '<strong class="strong">new!</strong>';
       }
@@ -226,6 +235,7 @@ if(!imgsrc){imgsrc=' style="top: 30%;left: 37%;width: 25%;" src="../image/noimag
       htmlstr += '<span>' + entry.title + '</span></a>';
       htmlstr += '<h4></h4>';
       htmlstr += '<p></p>';
+      htmlstr += '</div>';
       htmlstr += '</div></div>';
     }
     container.insertAdjacentHTML("beforeend", htmlstr);
@@ -254,6 +264,7 @@ if(!imgsrc){imgsrc=' style="top: 30%;left: 37%;width: 25%;" src="../image/noimag
     htmlstr += '<img class="card-img" ' + imgsrc +' alt="ハロプロ画像">';
     htmlstr += '<span class="cover"> <span class="more"> See details &rarr; </span> </span> </span>';
     var entryTime = new Date(entry.publishedDate).getTime();
+    htmlstr+='<div class="layerBox">';
     if(now >= entryTime && now <= (entryTime + pastTime)){
       htmlstr += '<strong class="strong">new!</strong>';
     }
@@ -261,6 +272,7 @@ if(!imgsrc){imgsrc=' style="top: 30%;left: 37%;width: 25%;" src="../image/noimag
     htmlstr += '<span>' + entry.title + '</span></a>';
     htmlstr += '<h4></h4>';
     htmlstr += '<p></p>';
+    htmlstr += '</div>';
     htmlstr += '</div></div>';
   }
    container.insertAdjacentHTML("beforeend", htmlstr);
@@ -289,6 +301,7 @@ if(!imgsrc){imgsrc=' style="top: 30%;left: 37%;width: 25%;" src="../image/noimag
     htmlstr += '<img class="card-img" ' + imgsrc +' alt="ハロプロ画像">';
     htmlstr += '<span class="cover"> <span class="more"> See details &rarr; </span> </span> </span>';
     var entryTime = new Date(entry.publishedDate).getTime();
+    htmlstr+='<div class="layerBox">';
     if(now >= entryTime && now <= (entryTime + pastTime)){
       htmlstr += '<strong class="strong">new!</strong>';
     }
@@ -296,6 +309,7 @@ if(!imgsrc){imgsrc=' style="top: 30%;left: 37%;width: 25%;" src="../image/noimag
     htmlstr += '<span>' + entry.title + '</span></a>';
     htmlstr += '<h4></h4>';
     htmlstr += '<p></p>';
+    htmlstr += '</div>';
     htmlstr += '</div></div>';
   }
   container.insertAdjacentHTML("beforeend", htmlstr);
@@ -324,6 +338,7 @@ if(!imgsrc){imgsrc=' style="top: 30%;left: 37%;width: 25%;" src="../image/noimag
     htmlstr += '<img class="card-img" ' + imgsrc +' alt="ハロプロ画像">';
     htmlstr += '<span class="cover"> <span class="more"> See details &rarr; </span> </span> </span>';
     var entryTime = new Date(entry.publishedDate).getTime();
+    htmlstr+='<div class="layerBox">';
     if(now >= entryTime && now <= (entryTime + pastTime)){
       htmlstr += '<strong class="strong">new!</strong>';
     }
@@ -331,6 +346,7 @@ if(!imgsrc){imgsrc=' style="top: 30%;left: 37%;width: 25%;" src="../image/noimag
     htmlstr += '<span>' + entry.title + '</span></a>';
     htmlstr += '<h4></h4>';
     htmlstr += '<p></p>';
+    htmlstr += '</div>';
     htmlstr += '</div></div>';
   }
    container.insertAdjacentHTML("beforeend", htmlstr);
@@ -359,6 +375,7 @@ if(!imgsrc){imgsrc=' style="top: 30%;left: 37%;width: 25%;" src="../image/noimag
     htmlstr += '<img class="card-img" ' + imgsrc +' alt="ハロプロ画像">';
     htmlstr += '<span class="cover"> <span class="more"> See details &rarr; </span> </span> </span>';
     var entryTime = new Date(entry.publishedDate).getTime();
+    htmlstr+='<div class="layerBox">';
     if(now >= entryTime && now <= (entryTime + pastTime)){
       htmlstr += '<strong class="strong">new!</strong>';
     }
@@ -366,6 +383,7 @@ if(!imgsrc){imgsrc=' style="top: 30%;left: 37%;width: 25%;" src="../image/noimag
     htmlstr += '<span>' + entry.title + '</span></a>';
     htmlstr += '<h4></h4>';
     htmlstr += '<p></p>';
+    htmlstr += '</div>';
     htmlstr += '</div></div>';
   }
    container.insertAdjacentHTML("beforeend", htmlstr);
@@ -392,6 +410,7 @@ var pastTime = pastDay * 24 * 60 * 60 * 1000;//newマークをつける期間の
     htmlstr += '<img class="card-img" ' + imgsrc +' alt="ハロプロ画像">';
     htmlstr += '<span class="cover"> <span class="more"> See details &rarr; </span> </span> </span>';
     var entryTime = new Date(entry.publishedDate).getTime();
+    htmlstr+='<div class="layerBox">';
     if(now >= entryTime && now <= (entryTime + pastTime)){
       htmlstr += '<strong class="strong">new!</strong>';
     }
@@ -399,6 +418,7 @@ var pastTime = pastDay * 24 * 60 * 60 * 1000;//newマークをつける期間の
     htmlstr += '<span>' + entry.title + '</span></a>';
     htmlstr += '<h4></h4>';
     htmlstr += '<p></p>';
+    htmlstr += '</div>';
     htmlstr += '</div></div>';
   }
   container.insertAdjacentHTML("beforeend", htmlstr);
@@ -428,6 +448,7 @@ var pastTime = pastDay * 24 * 60 * 60 * 1000;//newマークをつける期間の
     htmlstr += '<img class="card-img" ' + imgsrc +' alt="ハロプロ画像">';
     htmlstr += '<span class="cover"> <span class="more"> See details &rarr; </span> </span> </span>';
     var entryTime = new Date(entry.publishedDate).getTime();
+    htmlstr+='<div class="layerBox">';
     if(now >= entryTime && now <= (entryTime + pastTime)){
       htmlstr += '<strong class="strong">new!</strong>';
     }
@@ -435,6 +456,7 @@ var pastTime = pastDay * 24 * 60 * 60 * 1000;//newマークをつける期間の
 htmlstr += '<span>' + entry.title + '</span></a>';
     htmlstr += '<h4></h4>';
     htmlstr += '<p></p>';
+    htmlstr += '</div>';
     htmlstr += '</div></div>';
   }
    container.insertAdjacentHTML("beforeend", htmlstr);

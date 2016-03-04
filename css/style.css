@@ -228,7 +228,6 @@ img {
 .thumbnail .img {
   display: block;
   width: 100%;
-  overflow: hidden;
   height: 180px;
   margin: 0 0 0px;
   position: relative;
@@ -509,7 +508,7 @@ footer.entry-meta .meta-in {
   box-shadow: 0 2px 5px #ccc;
 width:99%;
 float:left;
-height:236px;
+height:258px;
 margin:0.5%;
 overflow:hidden;
 }
@@ -583,4 +582,9 @@ overflow: hidden;
 }
 .strong{
   color:#15BDBD;
+}
+.layerBox{
+  position: relative;
+    bottom: 0px;
+    background-color: rgba(255, 255, 255, 0.8);
 }
