@@ -62,7 +62,7 @@ htmlstr += '<span  class="img">';
 htmlstr += '<img class="card-img" ' + imgsrc +' alt="ハロプロ画像">';
 //htmlstr += '<span class="cover"> <span class="more"> See details &rarr; </span> </span> </span>';
 var entryTime = new Date(entry.publishedDate).getTime();
-htmlstr +='<div class="layerBox">'
+htmlstr +='<div class="mobilayerBox">'
 htmlstr +='<div class="titlediv">';
 if(now >= entryTime && now <= (entryTime + pastTime)){htmlstr += '<strong style="color:#15BDBD">new!</strong>';}
 else{htmlstr += '<strong style="color:rgba(0,0,0,0)">-</strong>';}

@@ -506,9 +506,9 @@ footer.entry-meta .meta-in {
   background: #fff;
   border-radius: 5px;
   box-shadow: 0 2px 5px #ccc;
-width:99%;
+width:48.5%;
 float:left;
-height:258px;
+height:180px;
 margin:0.5%;
 overflow:hidden;
 }
@@ -587,4 +587,10 @@ overflow: hidden;
   position: relative;
     bottom: 0px;
     background-color: rgba(255, 255, 255, 0.8);
+}
+.mobilayerBox{
+  position: relative;
+    bottom: 89px;
+    background-color: rgba(255, 255, 255, 0.8);
+    font-size: 12px;
 }
