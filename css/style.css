@@ -7,6 +7,7 @@ body {
   font-family: "Open sans", Helvetica, Arial, sans-serif;
   color: #666666;
   padding: 0;
+  margin:0 auto;
 }
 .topspace {
   margin-top: 40px;
@@ -506,7 +507,7 @@ footer.entry-meta .meta-in {
   background: #fff;
   border-radius: 5px;
   box-shadow: 0 2px 5px #ccc;
-width:48.5%;
+width:49%;
 float:left;
 height:180px;
 margin:0.5%;
@@ -554,8 +555,8 @@ overflow:hidden;
   font-size:25px;
 }
 .feedcontainer {
-  width:98%;
-  margin:1%;
+  width:100%;
+  margin:0%;
   overflow:auto;
 }
 .descriptor{

@@ -21,7 +21,7 @@ function initialize() {
 
 function feedAdd(rssUrl, boolNum) {
   var feed = new google.feeds.Feed(rssUrl);
-  feed.setNumEntries(10);
+  feed.setNumEntries(20);
   feed.load(function(result) {
     if (!result.error) {
       for (var i = 0; i < result.feed.entries.length; i++) {
@@ -34,7 +34,7 @@ function feedAdd(rssUrl, boolNum) {
       boolCount += 1;
     }
     if (boolCount == feedNum) {
-      feedOutput("feed", 100); //フィードの出力
+      feedOutput("feed", 200); //フィードの出力
       boolCount = 0;
     }
   });
@@ -46,7 +46,7 @@ function feedOutput(feedId, listNum) {
   var htmlstr = "";
   var container = document.getElementById("feed");
   entryArray = asort(entryArray, "sortDate");
-  if (listNum == 100) {
+  if (listNum == 200) {
     listNum = entryNum;
   }
   for (var i = 0; i < listNum; i++) {

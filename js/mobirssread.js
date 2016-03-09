@@ -5,9 +5,9 @@ var entryArray = new Array();
 var entryNum = 0;
 var boolCount = 0;
 
-var feedNum = 9;
+var feedNum = 10;
 function initialize() {
-  //feedAdd("http://feedblog.ameba.jp/rss/ameblo/morningmusume-10ki/rss20.xml", 10);
+feedAdd("http://blog.livedoor.jp/morning77/index.rdf", 10);
   feedAdd("http://fanblogs.jp/hoeeee/index1_0.rdf", 9);
   feedAdd("http://c-ute.doorblog.jp/index.rdf", 8);
   feedAdd("http://colorhello.blog.jp/index.rdf", 7);
@@ -20,7 +20,7 @@ feedAdd("http://helloproject-sokuhou.doorblog.jp/index.rdf", 1);
 }
 function feedAdd(rssUrl, boolNum) {
 var feed = new google.feeds.Feed(rssUrl);
-feed.setNumEntries(10);
+feed.setNumEntries(20);
 feed.load(function(result) {
 if (!result.error) {
 for (var i = 0; i < result.feed.entries.length; i++) {
@@ -33,7 +33,7 @@ entryNum+=1;
 boolCount+=1;
 }
 if(boolCount==feedNum){
-feedOutput("feed", 90);//フィードの出力
+feedOutput("feed", 200);//フィードの出力
 boolCount=0;
 }
 });
@@ -44,7 +44,7 @@ var useDate = "";
   var htmlstr="";
 var container = document.getElementById("feed");
 entryArray = asort(entryArray, "sortDate");
-if(listNum==90){
+if(listNum==200){
 listNum = entryNum;
 }
 for (var i = 0; i < listNum; i++) {
@@ -77,7 +77,7 @@ htmlstr += '<p></p>';
 htmlstr +='</div>';
 htmlstr += '</div></div>';
 }
-container.innerHTML =  htmlstr ;
+container.insertAdjacentHTML("beforeend", htmlstr);
 }
 
 function asort(myArray, key){

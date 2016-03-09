@@ -23,7 +23,7 @@ google.load("feeds", "1");
 }());
 
 function initialize() {
-  var number = 9;
+  var number = 12;
   var feedurl1 = "http://helloprosun.blog.jp/index.rdf";
   var feed1 = new google.feeds.Feed(feedurl1);
   feed1.setNumEntries(number);
