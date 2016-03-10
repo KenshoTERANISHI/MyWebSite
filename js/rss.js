@@ -23,7 +23,7 @@ google.load("feeds", "1");
 }());
 
 function initialize() {
-  var number = 9;
+  var number = 12;
   var feedurl1 = "http://helloprosun.blog.jp/index.rdf";
   var feed1 = new google.feeds.Feed(feedurl1);
   feed1.setNumEntries(number);
@@ -57,6 +57,9 @@ function initialize() {
   var feedurl11 = "http://matome.naver.jp/feed/topic/1LwVo";
   var feed11 = new google.feeds.Feed(feedurl11);
   feed11.setNumEntries(number);
+  var feedurl12 = "http://blog.livedoor.jp/morning77/index.rdf";
+  var feed12 = new google.feeds.Feed(feedurl12);
+  feed12.setNumEntries(number);
 //  feed11.setResultFormat(google.feeds.Feed.XML_FORMAT);
 
   feed1.load(function (result){
@@ -442,6 +445,43 @@ var pastTime = pastDay * 24 * 60 * 60 * 1000;//newマークをつける期間の
       if(!imgsrc){imgsrc=entry.content.match(/src="((http:)[\S]+((\.jpg)|(\.JPG)|(\.jpeg)|(\.JPEG)|(\.gif)|(\.GIF)|(\.png)|(\.PNG)))"/igm);}
       if(!imgsrc){imgsrc=' style="top: 30%;left: 37%;width: 25%;" src="../image/noimage.png"'}
 
+    var pdate = new Date(entry.publishedDate);
+    var strdate = pdate.getFullYear() + '年' + (pdate.getMonth() + 1) + '月' + pdate.getDate() + '日' + pdate.getHours() + '時' + pdate.getMinutes() + '分' + pdate.getSeconds() + '秒';
+    htmlstr += '<span  class="img">';
+    htmlstr += '<img class="card-img" ' + imgsrc +' alt="ハロプロ画像">';
+    htmlstr += '<span class="cover"> <span class="more"> See details &rarr; </span> </span> </span>';
+    var entryTime = new Date(entry.publishedDate).getTime();
+    htmlstr+='<div class="layerBox">';
+    if(now >= entryTime && now <= (entryTime + pastTime)){
+      htmlstr += '<strong class="strong">new!</strong>';
+    }
+    htmlstr += '<p>' + strdate + '</p>';
+htmlstr += '<span>' + entry.title + '</span></a>';
+    htmlstr += '<h4></h4>';
+    htmlstr += '<p></p>';
+    htmlstr += '</div>';
+    htmlstr += '</div></div>';
+  }
+   container.insertAdjacentHTML("beforeend", htmlstr);
+}else{
+   alert(result.error.code + ":" + result.error.message);
+}
+});
+
+feed12.load(function (result){
+if (!result.error){
+  var pastDay = 0.25;//何日数前までnewマークをつけるか指定
+var now = (new Date()).getTime();//現在の時間
+var pastTime = pastDay * 24 * 60 * 60 * 1000;//newマークをつける期間の時間
+  var container = document.getElementById("feed12");
+  var htmlstr = "";
+  for (var i = 0; i < result.feed.entries.length; i++) {
+    var entry = result.feed.entries[i];
+    htmlstr += '<div class="card"><div class="col-xs-12 col-sm-6 col-md-4 col-lg-4" >';
+    htmlstr += '<a class="thumbnail" href="'+ entry.link +'" target="_blank">';
+    imgsrc = entry.content.match(/src="((http:){1}[\S_-]+(\.gif))"/igm);
+      if(!imgsrc){imgsrc=entry.content.match(/src="((http:)[\S]+((\.jpg)|(\.JPG)|(\.jpeg)|(\.JPEG)|(\.gif)|(\.GIF)|(\.png)|(\.PNG)))"/igm);}
+      if(!imgsrc){imgsrc=' style="top: 30%;left: 37%;width: 25%;" src="../image/noimage.png"'}
     var pdate = new Date(entry.publishedDate);
     var strdate = pdate.getFullYear() + '年' + (pdate.getMonth() + 1) + '月' + pdate.getDate() + '日' + pdate.getHours() + '時' + pdate.getMinutes() + '分' + pdate.getSeconds() + '秒';
     htmlstr += '<span  class="img">';

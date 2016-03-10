@@ -4,10 +4,10 @@ var entryArray = new Array();
 var entryNum = 0;
 var boolCount = 0;
 
-var feedNum = 9;
+var feedNum = 10;
 
 function initialize() {
-  //feedAdd("http://matome.naver.jp/feed/topic/1LwVo", 10);
+  feedAdd("http://blog.livedoor.jp/morning77/index.rdf", 10);
   feedAdd("http://fanblogs.jp/hoeeee/index1_0.rdf", 9);
   feedAdd("http://c-ute.doorblog.jp/index.rdf", 8);
   feedAdd("http://colorhello.blog.jp/index.rdf", 7);
@@ -21,7 +21,7 @@ function initialize() {
 
 function feedAdd(rssUrl, boolNum) {
   var feed = new google.feeds.Feed(rssUrl);
-  feed.setNumEntries(10);
+  feed.setNumEntries(20);
   feed.load(function(result) {
     if (!result.error) {
       for (var i = 0; i < result.feed.entries.length; i++) {
@@ -34,7 +34,7 @@ function feedAdd(rssUrl, boolNum) {
       boolCount += 1;
     }
     if (boolCount == feedNum) {
-      feedOutput("feed", 90); //フィードの出力
+      feedOutput("feed", 200); //フィードの出力
       boolCount = 0;
     }
   });
@@ -46,7 +46,7 @@ function feedOutput(feedId, listNum) {
   var htmlstr = "";
   var container = document.getElementById("feed");
   entryArray = asort(entryArray, "sortDate");
-  if (listNum == 90) {
+  if (listNum == 200) {
     listNum = entryNum;
   }
   for (var i = 0; i < listNum; i++) {
@@ -70,8 +70,10 @@ function feedOutput(feedId, listNum) {
     htmlstr += '<div class="layerBox">';
     if (now >= entryTime && now <= (entryTime + pastTime)) {
       htmlstr += '<strong class="strong">new!</strong></br>';
+      htmlstr +='<img style="width:12%;" src="http://b.hatena.ne.jp/entry/image/'+entry.link+'">';
     } else {
       htmlstr += '<strong class="strong"> </strong></br>';
+      htmlstr +='<img style="width:12%;" src="http://b.hatena.ne.jp/entry/image/'+entry.link+'">';
     }
       htmlstr += '<div style="height:17px;">';
     htmlstr += '<span class="strdate">' + strdate + '</span>';
