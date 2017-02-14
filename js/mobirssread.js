@@ -22,7 +22,7 @@ $(function(){
               var date = new Date(entryArray[entryNum].date); // now
               entryArray[entryNum].sortDate = (date.getFullYear() * 1000000) + ((date.getMonth() + 1) * 3600 * 32) + (date.getDate() * 3600) + (date.getHours() * 60) + date.getMinutes();
               entryArray[entryNum].blogName = json.query.results.item[i].title;
-              console.log(entryArray[i])
+              //console.log(entryArray[i])
               entryNum +=1;
             }
           }
@@ -51,10 +51,11 @@ $(function(){
           htmlstr +='<div class="titlediv">';
           //if(now >= entryTime && now <= (entryTime + pastTime)){htmlstr += '<strong style="color:#15BDBD">new!</strong>';}
           //else{htmlstr += '<strong style="color:rgba(0,0,0,0)">-</strong>';}
-          //htmlstr += '<span class="strdate">' + strdate + '</span>';
-          if(entryArray[i].blogName=='ハロプロまとめ『カラフルxハロプロ’16』')entryArray[i].blogName='カラフルxハロプロ’16';
-          if(entryArray[i].blogName=='ハロプロってながいぜぃ・・・Blog')entryArray[i].blogName='ハロプロってながいぜぃ';
+          htmlstr += '<span class="strdate">' + strdate + '</span>';
+          //if(entryArray[i].blogName=='ハロプロまとめ『カラフルxハロプロ’16』')entryArray[i].blogName='カラフルxハロプロ’16';
+          //if(entryArray[i].blogName=='ハロプロってながいぜぃ・・・Blog')entryArray[i].blogName='ハロプロってながいぜぃ';
           //htmlstr += '<span class="blogname">' + entryArray[i].blogName + '</span></a>';
+            htmlstr += '<span class="blogname"></span></a>';
           htmlstr +='</div>';
           htmlstr += '<span class="mobititle">' + entry.title + '</span>';
           htmlstr += '<h4></h4>';
