@@ -41,7 +41,8 @@ $(function(){
           imgsrc = entry.encoded.match(/(src="http:)[\S]+((\.jpg)|(\.JPG)|(\.jpeg)|(\.JPEG)|(\.gif)|(\.GIF)|(\.png)|(\.PNG))"/);
           if(!imgsrc){
             imgsrc=entry.encoded.match(/src="((https:\/\/www\.youtube\.com\/embed\/)[\S_-]+)"/igm);
-            if(imgsrc[0]!=null){
+            if(!imgsrc){imgsrc=entry.encoded.match(/src="((http:\/\/www\.youtube\.com\/embed\/)[\S_-]+)"/igm);}
+            if(imgsrc){
             var slice = imgsrc[0].slice(1).split("/")
             var id = slice[4]
             var id = id.substr( 0, id.length-1 ) ;

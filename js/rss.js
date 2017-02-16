@@ -67,7 +67,8 @@ $(function(){
                   if(!imgsrc){imgsrc=entry.encoded.match(/src="((http:)[\S]+((\.jpg)|(\.JPG)|(\.jpeg)|(\.JPEG)|(\.gif)|(\.GIF)|(\.png)|(\.PNG)))"/igm);}
                   if(!imgsrc){
                     imgsrc=entry.encoded.match(/src="((https:\/\/www\.youtube\.com\/embed\/)[\S_-]+)"/igm);
-                    if(!imgsrc){
+                    if(!imgsrc){imgsrc=entry.encoded.match(/src="((http:\/\/www\.youtube\.com\/embed\/)[\S_-]+)"/igm);}
+                    if(imgsrc){
                     var slice = imgsrc[0].slice(1).split("/")
                     var id = slice[4]
                     var id = id.substr( 0, id.length-1 ) ;
@@ -133,7 +134,8 @@ $(function(){
                   if(!imgsrc){imgsrc=entry.encoded.match(/src="((http:)[\S]+((\.jpg)|(\.JPG)|(\.jpeg)|(\.JPEG)|(\.gif)|(\.GIF)|(\.png)|(\.PNG)))"/igm);}
                   if(!imgsrc){
                     imgsrc=entry.encoded.match(/src="((https:\/\/www\.youtube\.com\/embed\/)[\S_-]+)"/igm);
-                    if(!imgsrc){
+                    if(!imgsrc){imgsrc=entry.encoded.match(/src="((http:\/\/www\.youtube\.com\/embed\/)[\S_-]+)"/igm);}
+                    if(imgsrc){
                     var slice = imgsrc[0].slice(1).split("/")
                     var id = slice[4]
                     var id = id.substr( 0, id.length-1 ) ;
@@ -199,7 +201,8 @@ $(function(){
                   if(!imgsrc){imgsrc=entry.encoded.match(/src="((http:)[\S]+((\.jpg)|(\.JPG)|(\.jpeg)|(\.JPEG)|(\.gif)|(\.GIF)|(\.png)|(\.PNG)))"/igm);}
                   if(!imgsrc){
                     imgsrc=entry.encoded.match(/src="((https:\/\/www\.youtube\.com\/embed\/)[\S_-]+)"/igm);
-                    if(!imgsrc){
+                    if(!imgsrc){imgsrc=entry.encoded.match(/src="((http:\/\/www\.youtube\.com\/embed\/)[\S_-]+)"/igm);}
+                    if(imgsrc){
                     var slice = imgsrc[0].slice(1).split("/")
                     var id = slice[4]
                     var id = id.substr( 0, id.length-1 ) ;
@@ -265,7 +268,8 @@ $(function(){
                   if(!imgsrc){imgsrc=entry.encoded.match(/src="((http:)[\S]+((\.jpg)|(\.JPG)|(\.jpeg)|(\.JPEG)|(\.gif)|(\.GIF)|(\.png)|(\.PNG)))"/igm);}
                   if(!imgsrc){
                     imgsrc=entry.encoded.match(/src="((https:\/\/www\.youtube\.com\/embed\/)[\S_-]+)"/igm);
-                    if(!imgsrc){
+                    if(!imgsrc){imgsrc=entry.encoded.match(/src="((http:\/\/www\.youtube\.com\/embed\/)[\S_-]+)"/igm);}
+                    if(imgsrc){
                     var slice = imgsrc[0].slice(1).split("/")
                     var id = slice[4]
                     var id = id.substr( 0, id.length-1 ) ;
@@ -327,11 +331,13 @@ $(function(){
                 var date = yearNum + '.' + m + '.' + d;
                 htmlstr += '<div class="card"><div class="col-xs-12 col-sm-6 col-md-4 col-lg-4" >';
                 htmlstr += '<a class="thumbnail" href="'+ entry.link +'" target="_blank">';
+                console.log(entry)
                 imgsrc = entry.encoded.match(/src="((http:){1}[\S_-]+(\.gif))"/igm);
                   if(!imgsrc){imgsrc=entry.encoded.match(/src="((http:)[\S]+((\.jpg)|(\.JPG)|(\.jpeg)|(\.JPEG)|(\.gif)|(\.GIF)|(\.png)|(\.PNG)))"/igm);}
                   if(!imgsrc){
                     imgsrc=entry.encoded.match(/src="((https:\/\/www\.youtube\.com\/embed\/)[\S_-]+)"/igm);
-                    if(!imgsrc){
+                    if(!imgsrc){imgsrc=entry.encoded.match(/src="((http:\/\/www\.youtube\.com\/embed\/)[\S_-]+)"/igm);}
+                    if(imgsrc){
                     var slice = imgsrc[0].slice(1).split("/")
                     var id = slice[4]
                     var id = id.substr( 0, id.length-1 ) ;
@@ -397,7 +403,8 @@ $(function(){
                   if(!imgsrc){imgsrc=entry.encoded.match(/src="((http:)[\S]+((\.jpg)|(\.JPG)|(\.jpeg)|(\.JPEG)|(\.gif)|(\.GIF)|(\.png)|(\.PNG)))"/igm);}
                   if(!imgsrc){
                     imgsrc=entry.encoded.match(/src="((https:\/\/www\.youtube\.com\/embed\/)[\S_-]+)"/igm);
-                    if(!imgsrc){
+                    if(!imgsrc){imgsrc=entry.encoded.match(/src="((http:\/\/www\.youtube\.com\/embed\/)[\S_-]+)"/igm);}
+                    if(imgsrc){
                     var slice = imgsrc[0].slice(1).split("/")
                     var id = slice[4]
                     var id = id.substr( 0, id.length-1 ) ;
@@ -463,7 +470,8 @@ $(function(){
                   if(!imgsrc){imgsrc=entry.encoded.match(/src="((http:)[\S]+((\.jpg)|(\.JPG)|(\.jpeg)|(\.JPEG)|(\.gif)|(\.GIF)|(\.png)|(\.PNG)))"/igm);}
                   if(!imgsrc){
                     imgsrc=entry.encoded.match(/src="((https:\/\/www\.youtube\.com\/embed\/)[\S_-]+)"/igm);
-                    if(!imgsrc){
+                    if(!imgsrc){imgsrc=entry.encoded.match(/src="((http:\/\/www\.youtube\.com\/embed\/)[\S_-]+)"/igm);}
+                    if(imgsrc){
                     var slice = imgsrc[0].slice(1).split("/")
                     var id = slice[4]
                     var id = id.substr( 0, id.length-1 ) ;
@@ -529,7 +537,8 @@ $(function(){
                   if(!imgsrc){imgsrc=entry.encoded.match(/src="((http:)[\S]+((\.jpg)|(\.JPG)|(\.jpeg)|(\.JPEG)|(\.gif)|(\.GIF)|(\.png)|(\.PNG)))"/igm);}
                   if(!imgsrc){
                     imgsrc=entry.encoded.match(/src="((https:\/\/www\.youtube\.com\/embed\/)[\S_-]+)"/igm);
-                    if(!imgsrc){
+                    if(!imgsrc){imgsrc=entry.encoded.match(/src="((http:\/\/www\.youtube\.com\/embed\/)[\S_-]+)"/igm);}
+                    if(imgsrc){
                     var slice = imgsrc[0].slice(1).split("/")
                     var id = slice[4]
                     var id = id.substr( 0, id.length-1 ) ;
@@ -563,10 +572,10 @@ $(function(){
 });
 $(function(){
     $.getJSON("https://query.yahooapis.com/v1/public/yql?callback=?", {
-        q: "select * from rss(0,8) where url = '"+feedurl10+"'",
+        q: "select * from rss(0,8) where url = '"+feedurl12+"'",
         format: "json"
     }, function(json) {
-        var container = document.getElementById('feed10');
+        var container = document.getElementById('feed12');
 
         for (var i = 0; i < json.query.results.item.length; i++) {
               if (!json.query.results.error){
@@ -595,7 +604,8 @@ $(function(){
                   if(!imgsrc){imgsrc=entry.encoded.match(/src="((http:)[\S]+((\.jpg)|(\.JPG)|(\.jpeg)|(\.JPEG)|(\.gif)|(\.GIF)|(\.png)|(\.PNG)))"/igm);}
                   if(!imgsrc){
                     imgsrc=entry.encoded.match(/src="((https:\/\/www\.youtube\.com\/embed\/)[\S_-]+)"/igm);
-                    if(!imgsrc){
+                    if(!imgsrc){imgsrc=entry.encoded.match(/src="((http:\/\/www\.youtube\.com\/embed\/)[\S_-]+)"/igm);}
+                    if(imgsrc){
                     var slice = imgsrc[0].slice(1).split("/")
                     var id = slice[4]
                     var id = id.substr( 0, id.length-1 ) ;
