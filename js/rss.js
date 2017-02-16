@@ -65,6 +65,15 @@ $(function(){
                 htmlstr += '<a class="thumbnail" href="'+ entry.link +'" target="_blank">';
                 imgsrc = entry.encoded.match(/src="((http:){1}[\S_-]+(\.gif))"/igm);
                   if(!imgsrc){imgsrc=entry.encoded.match(/src="((http:)[\S]+((\.jpg)|(\.JPG)|(\.jpeg)|(\.JPEG)|(\.gif)|(\.GIF)|(\.png)|(\.PNG)))"/igm);}
+                  if(!imgsrc){
+                    imgsrc=entry.encoded.match(/src="((https:\/\/www\.youtube\.com\/embed\/)[\S_-]+)"/igm);
+                    if(!imgsrc){
+                    var slice = imgsrc[0].slice(1).split("/")
+                    var id = slice[4]
+                    var id = id.substr( 0, id.length-1 ) ;
+                    imgsrc="src="+"http:\/\/i\.ytimg.com\/vi\/"+id+"\/0\.jpg";
+                  }
+                  }
                   if(!imgsrc){imgsrc=' style="top: 30%;left: 37%;width: 25%;" src="../image/noimage.png"'}
                 //var pdate = new Date(entry.publishedDate);
                 var strdate = yearNum + '年' + m + '月' + d + '日' + dd.getHours() + '時' + dd.getMinutes() + '分' + dd.getSeconds() + '秒';
@@ -122,6 +131,15 @@ $(function(){
                 htmlstr += '<a class="thumbnail" href="'+ entry.link +'" target="_blank">';
                 imgsrc = entry.encoded.match(/src="((http:){1}[\S_-]+(\.gif))"/igm);
                   if(!imgsrc){imgsrc=entry.encoded.match(/src="((http:)[\S]+((\.jpg)|(\.JPG)|(\.jpeg)|(\.JPEG)|(\.gif)|(\.GIF)|(\.png)|(\.PNG)))"/igm);}
+                  if(!imgsrc){
+                    imgsrc=entry.encoded.match(/src="((https:\/\/www\.youtube\.com\/embed\/)[\S_-]+)"/igm);
+                    if(!imgsrc){
+                    var slice = imgsrc[0].slice(1).split("/")
+                    var id = slice[4]
+                    var id = id.substr( 0, id.length-1 ) ;
+                    imgsrc="src="+"http:\/\/i\.ytimg.com\/vi\/"+id+"\/0\.jpg";
+                  }
+                  }
                   if(!imgsrc){imgsrc=' style="top: 30%;left: 37%;width: 25%;" src="../image/noimage.png"'}
                 //var pdate = new Date(entry.publishedDate);
                 var strdate = yearNum + '年' + m + '月' + d + '日' + dd.getHours() + '時' + dd.getMinutes() + '分' + dd.getSeconds() + '秒';
@@ -179,6 +197,15 @@ $(function(){
                 htmlstr += '<a class="thumbnail" href="'+ entry.link +'" target="_blank">';
                 imgsrc = entry.encoded.match(/src="((http:){1}[\S_-]+(\.gif))"/igm);
                   if(!imgsrc){imgsrc=entry.encoded.match(/src="((http:)[\S]+((\.jpg)|(\.JPG)|(\.jpeg)|(\.JPEG)|(\.gif)|(\.GIF)|(\.png)|(\.PNG)))"/igm);}
+                  if(!imgsrc){
+                    imgsrc=entry.encoded.match(/src="((https:\/\/www\.youtube\.com\/embed\/)[\S_-]+)"/igm);
+                    if(!imgsrc){
+                    var slice = imgsrc[0].slice(1).split("/")
+                    var id = slice[4]
+                    var id = id.substr( 0, id.length-1 ) ;
+                    imgsrc="src="+"http:\/\/i\.ytimg.com\/vi\/"+id+"\/0\.jpg";
+                  }
+                  }
                   if(!imgsrc){imgsrc=' style="top: 30%;left: 37%;width: 25%;" src="../image/noimage.png"'}
                 //var pdate = new Date(entry.publishedDate);
                 var strdate = yearNum + '年' + m + '月' + d + '日' + dd.getHours() + '時' + dd.getMinutes() + '分' + dd.getSeconds() + '秒';
@@ -236,6 +263,15 @@ $(function(){
                 htmlstr += '<a class="thumbnail" href="'+ entry.link +'" target="_blank">';
                 imgsrc = entry.encoded.match(/src="((http:){1}[\S_-]+(\.gif))"/igm);
                   if(!imgsrc){imgsrc=entry.encoded.match(/src="((http:)[\S]+((\.jpg)|(\.JPG)|(\.jpeg)|(\.JPEG)|(\.gif)|(\.GIF)|(\.png)|(\.PNG)))"/igm);}
+                  if(!imgsrc){
+                    imgsrc=entry.encoded.match(/src="((https:\/\/www\.youtube\.com\/embed\/)[\S_-]+)"/igm);
+                    if(!imgsrc){
+                    var slice = imgsrc[0].slice(1).split("/")
+                    var id = slice[4]
+                    var id = id.substr( 0, id.length-1 ) ;
+                    imgsrc="src="+"http:\/\/i\.ytimg.com\/vi\/"+id+"\/0\.jpg";
+                  }
+                  }
                   if(!imgsrc){imgsrc=' style="top: 30%;left: 37%;width: 25%;" src="../image/noimage.png"'}
                 //var pdate = new Date(entry.publishedDate);
                 var strdate = yearNum + '年' + m + '月' + d + '日' + dd.getHours() + '時' + dd.getMinutes() + '分' + dd.getSeconds() + '秒';
@@ -293,6 +329,15 @@ $(function(){
                 htmlstr += '<a class="thumbnail" href="'+ entry.link +'" target="_blank">';
                 imgsrc = entry.encoded.match(/src="((http:){1}[\S_-]+(\.gif))"/igm);
                   if(!imgsrc){imgsrc=entry.encoded.match(/src="((http:)[\S]+((\.jpg)|(\.JPG)|(\.jpeg)|(\.JPEG)|(\.gif)|(\.GIF)|(\.png)|(\.PNG)))"/igm);}
+                  if(!imgsrc){
+                    imgsrc=entry.encoded.match(/src="((https:\/\/www\.youtube\.com\/embed\/)[\S_-]+)"/igm);
+                    if(!imgsrc){
+                    var slice = imgsrc[0].slice(1).split("/")
+                    var id = slice[4]
+                    var id = id.substr( 0, id.length-1 ) ;
+                    imgsrc="src="+"http:\/\/i\.ytimg.com\/vi\/"+id+"\/0\.jpg";
+                  }
+                  }
                   if(!imgsrc){imgsrc=' style="top: 30%;left: 37%;width: 25%;" src="../image/noimage.png"'}
                 //var pdate = new Date(entry.publishedDate);
                 var strdate = yearNum + '年' + m + '月' + d + '日' + dd.getHours() + '時' + dd.getMinutes() + '分' + dd.getSeconds() + '秒';
@@ -350,6 +395,15 @@ $(function(){
                 htmlstr += '<a class="thumbnail" href="'+ entry.link +'" target="_blank">';
                 imgsrc = entry.encoded.match(/src="((http:){1}[\S_-]+(\.gif))"/igm);
                   if(!imgsrc){imgsrc=entry.encoded.match(/src="((http:)[\S]+((\.jpg)|(\.JPG)|(\.jpeg)|(\.JPEG)|(\.gif)|(\.GIF)|(\.png)|(\.PNG)))"/igm);}
+                  if(!imgsrc){
+                    imgsrc=entry.encoded.match(/src="((https:\/\/www\.youtube\.com\/embed\/)[\S_-]+)"/igm);
+                    if(!imgsrc){
+                    var slice = imgsrc[0].slice(1).split("/")
+                    var id = slice[4]
+                    var id = id.substr( 0, id.length-1 ) ;
+                    imgsrc="src="+"http:\/\/i\.ytimg.com\/vi\/"+id+"\/0\.jpg";
+                  }
+                  }
                   if(!imgsrc){imgsrc=' style="top: 30%;left: 37%;width: 25%;" src="../image/noimage.png"'}
                 //var pdate = new Date(entry.publishedDate);
                 var strdate = yearNum + '年' + m + '月' + d + '日' + dd.getHours() + '時' + dd.getMinutes() + '分' + dd.getSeconds() + '秒';
@@ -407,6 +461,15 @@ $(function(){
                 htmlstr += '<a class="thumbnail" href="'+ entry.link +'" target="_blank">';
                 imgsrc = entry.encoded.match(/src="((http:){1}[\S_-]+(\.gif))"/igm);
                   if(!imgsrc){imgsrc=entry.encoded.match(/src="((http:)[\S]+((\.jpg)|(\.JPG)|(\.jpeg)|(\.JPEG)|(\.gif)|(\.GIF)|(\.png)|(\.PNG)))"/igm);}
+                  if(!imgsrc){
+                    imgsrc=entry.encoded.match(/src="((https:\/\/www\.youtube\.com\/embed\/)[\S_-]+)"/igm);
+                    if(!imgsrc){
+                    var slice = imgsrc[0].slice(1).split("/")
+                    var id = slice[4]
+                    var id = id.substr( 0, id.length-1 ) ;
+                    imgsrc="src="+"http:\/\/i\.ytimg.com\/vi\/"+id+"\/0\.jpg";
+                  }
+                  }
                   if(!imgsrc){imgsrc=' style="top: 30%;left: 37%;width: 25%;" src="../image/noimage.png"'}
                 //var pdate = new Date(entry.publishedDate);
                 var strdate = yearNum + '年' + m + '月' + d + '日' + dd.getHours() + '時' + dd.getMinutes() + '分' + dd.getSeconds() + '秒';
@@ -464,6 +527,15 @@ $(function(){
                 htmlstr += '<a class="thumbnail" href="'+ entry.link +'" target="_blank">';
                 imgsrc = entry.encoded.match(/src="((http:){1}[\S_-]+(\.gif))"/igm);
                   if(!imgsrc){imgsrc=entry.encoded.match(/src="((http:)[\S]+((\.jpg)|(\.JPG)|(\.jpeg)|(\.JPEG)|(\.gif)|(\.GIF)|(\.png)|(\.PNG)))"/igm);}
+                  if(!imgsrc){
+                    imgsrc=entry.encoded.match(/src="((https:\/\/www\.youtube\.com\/embed\/)[\S_-]+)"/igm);
+                    if(!imgsrc){
+                    var slice = imgsrc[0].slice(1).split("/")
+                    var id = slice[4]
+                    var id = id.substr( 0, id.length-1 ) ;
+                    imgsrc="src="+"http:\/\/i\.ytimg.com\/vi\/"+id+"\/0\.jpg";
+                  }
+                  }
                   if(!imgsrc){imgsrc=' style="top: 30%;left: 37%;width: 25%;" src="../image/noimage.png"'}
                 //var pdate = new Date(entry.publishedDate);
                 var strdate = yearNum + '年' + m + '月' + d + '日' + dd.getHours() + '時' + dd.getMinutes() + '分' + dd.getSeconds() + '秒';
@@ -521,6 +593,15 @@ $(function(){
                 htmlstr += '<a class="thumbnail" href="'+ entry.link +'" target="_blank">';
                 imgsrc = entry.encoded.match(/src="((http:){1}[\S_-]+(\.gif))"/igm);
                   if(!imgsrc){imgsrc=entry.encoded.match(/src="((http:)[\S]+((\.jpg)|(\.JPG)|(\.jpeg)|(\.JPEG)|(\.gif)|(\.GIF)|(\.png)|(\.PNG)))"/igm);}
+                  if(!imgsrc){
+                    imgsrc=entry.encoded.match(/src="((https:\/\/www\.youtube\.com\/embed\/)[\S_-]+)"/igm);
+                    if(!imgsrc){
+                    var slice = imgsrc[0].slice(1).split("/")
+                    var id = slice[4]
+                    var id = id.substr( 0, id.length-1 ) ;
+                    imgsrc="src="+"http:\/\/i\.ytimg.com\/vi\/"+id+"\/0\.jpg";
+                  }
+                  }
                   if(!imgsrc){imgsrc=' style="top: 30%;left: 37%;width: 25%;" src="../image/noimage.png"'}
                 //var pdate = new Date(entry.publishedDate);
                 var strdate = yearNum + '年' + m + '月' + d + '日' + dd.getHours() + '時' + dd.getMinutes() + '分' + dd.getSeconds() + '秒';

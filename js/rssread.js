@@ -39,6 +39,15 @@ $(function(){
           htmlstr += '<div class="col-xs-12 col-sm-6 col-md-4 col-lg-4" >';
           //imgsrc = entry.content.match(/src="(.*?)"/igm);
           imgsrc = entry.encoded.match(/(src="http:)[\S]+((\.jpg)|(\.JPG)|(\.jpeg)|(\.JPEG)|(\.gif)|(\.GIF)|(\.png)|(\.PNG))"/);
+          if(!imgsrc){
+            imgsrc=entry.encoded.match(/src="((https:\/\/www\.youtube\.com\/embed\/)[\S_-]+)"/igm);
+            if(imgsrc[0]!=null){
+            var slice = imgsrc[0].slice(1).split("/")
+            var id = slice[4]
+            var id = id.substr( 0, id.length-1 ) ;
+            imgsrc="src="+"http:\/\/i\.ytimg.com\/vi\/"+id+"\/0\.jpg";
+          }
+          }
           if(!imgsrc){imgsrc=' style="top: 30%;left: 37%;width: 25%;" src="../image/noimage.png"'}
           //var pastDay = 0.25;
           //var now = (new Date()).getTime();
